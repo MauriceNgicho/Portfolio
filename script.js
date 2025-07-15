@@ -85,32 +85,46 @@ window.addEventListener('scroll', () => {
 // Contact form handling
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
+
         // Get form data
         const formData = new FormData(contactForm);
         const name = formData.get('name');
         const email = formData.get('email');
         const message = formData.get('message');
-        
+
         // Simple validation
         if (!name || !email || !message) {
             alert('Please fill in all fields');
             return;
         }
-        
+
         // Email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
             alert('Please enter a valid email address');
             return;
         }
-        
-        // Here you would typically send the form data to your backend
-        // For now, we'll just show a success message
-        alert('Thank you for your message! I\'ll get back to you soon.');
-        contactForm.reset();
+
+        // Send data to Flask backend
+        try {
+            const response = await fetch('http://localhost:5000/send_message', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email, message })
+            });
+
+            const result = await response.json();
+            if (result.success) {
+                alert('Thank you for your message! I\'ll get back to you soon.');
+                contactForm.reset();
+            } else {
+                alert('Error: ' + (result.error || 'Could not send message.'));
+            }
+        } catch (error) {
+            alert('Error: Could not connect to the server.');
+        }
     });
 }
 
@@ -119,7 +133,7 @@ const codeLines = document.querySelectorAll('.code-line');
 codeLines.forEach((line, index) => {
     const text = line.textContent;
     line.textContent = '';
-    
+
     setTimeout(() => {
         let i = 0;
         const typeWriter = () => {
@@ -153,7 +167,7 @@ document.querySelectorAll('.skill-item').forEach(item => {
     item.addEventListener('mouseenter', () => {
         item.style.transform = 'translateX(10px) scale(1.02)';
     });
-    
+
     item.addEventListener('mouseleave', () => {
         item.style.transform = 'translateX(0) scale(1)';
     });
@@ -164,7 +178,7 @@ document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('mouseenter', () => {
         card.style.transform = 'translateY(-15px) scale(1.02)';
     });
-    
+
     card.addEventListener('mouseleave', () => {
         card.style.transform = 'translateY(0) scale(1)';
     });
@@ -176,11 +190,11 @@ style.textContent = `
     .nav-link.active {
         color: var(--primary-color) !important;
     }
-    
+
     .nav-link.active::after {
         width: 100% !important;
     }
-    
+
     body.loaded .hero-title,
     body.loaded .hero-subtitle,
     body.loaded .hero-description,
