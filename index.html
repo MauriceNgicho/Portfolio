@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maurice Ngicho - Backend Software Engineer</title>
+    <title>Maurice Ngicho — Backend Engineer</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="#home">MO</a>
+                <a href="#home">MN<span class="logo-dot">.</span></a>
             </div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
@@ -22,7 +22,7 @@
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" aria-label="Toggle menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -32,69 +32,155 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-bg-grid"></div>
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">Maurice Ngicho</h1>
-                <h2 class="hero-subtitle">Backend Software Engineer</h2>
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Available for opportunities
+                </div>
+                <h1 class="hero-title">
+                    <span class="hero-name">Maurice</span>
+                    <span class="hero-name">Ngicho</span>
+                </h1>
+                <div class="hero-role">
+                    <span class="role-line"></span>
+                    <span>Backend Software Engineer</span>
+                </div>
                 <p class="hero-description">
-                    I build scalable, production-ready APIs and automation tools — integrating AI, cloud, and backend systems to deliver
-                    real-world impact. Passionate about solving problems, optimizing workflows, and turning ideas into deployed products.
+                    I design and ship scalable APIs, secure authentication systems, and 
+                    production-ready backend infrastructure — built to handle real-world loads.
                 </p>
                 <div class="hero-buttons">
-                    <a href="https://github.com/MauriceNgicho" target="_blank" class="btn btn-primary">
-                        <i class="fab fa-github"></i> GitHub
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <!-- <a href="assets/Maurice_Ojwang_CV.pdf" class="btn btn-outline" target="_blank" download>
+                        <i class="fas fa-download"></i> Download CV
+                    </a> -->
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/MauriceNgicho" target="_blank" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/maurice-ngicho-069654234/" target="_blank" class="btn btn-secondary">
-                        <i class="fab fa-linkedin"></i> LinkedIn
+                    <a href="https://www.linkedin.com/in/maurice-ngicho-069654234/" target="_blank" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="assets/Maurice_Ojwang_CV.pdf" class="btn btn-outline" target="_blank" download>
-                        <i class="fas fa-download"></i> CV
+                    <a href="mailto:mrcngicho@gmail.com" class="social-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
                     </a>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="code-animation">
-                    <div class="code-line">def build_backend():</div>
-                    <div class="code-line">    return "scalable & secure"</div>
+            <div class="hero-visual">
+                <div class="avatar-ring">
+                    <div class="avatar-placeholder">
+                        <span class="avatar-initials">MN</span>
+                    </div>
+                    <div class="ring ring-1"></div>
+                    <div class="ring ring-2"></div>
+                </div>
+                <div class="code-card">
+                    <div class="code-card-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="code-filename">api.py</span>
+                    </div>
+                    <div class="code-body">
+                        <div class="code-line"><span class="c-kw">def</span> <span class="c-fn">build_backend</span>():</div>
+                        <div class="code-line indent"><span class="c-kw">return</span> {</div>
+                        <div class="code-line indent2"><span class="c-str">"scalable"</span>: <span class="c-bool">True</span>,</div>
+                        <div class="code-line indent2"><span class="c-str">"secure"</span>: <span class="c-bool">True</span>,</div>
+                        <div class="code-line indent2"><span class="c-str">"deployed"</span>: <span class="c-bool">True</span></div>
+                        <div class="code-line indent">}</div>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="scroll-hint">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <div class="section-label">01 — About</div>
+            <h2 class="section-title">Who I Am</h2>
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        I’m a backend-focused software engineer passionate about building scalable, reliable, 
-                        and maintainable systems that power modern applications. I enjoy designing clean APIs, 
-                        implementing secure authentication, and developing solutions that solve real-world 
-                        problems with elegance and efficiency.
+                        I'm a backend focused software engineer passionate about building scalable, reliable,
+                        and maintainable systems that power modern applications. Graduate of the
+                        <strong>ALX Software Engineering Program</strong>, with a strong focus on production-style
+                        backend architecture.
                     </p>
                     <p>
-                        My work combines a strong understanding of backend architecture with hands-on experience 
-                        in Python, JavaScript, and modern frameworks. I take pride in writing clean, testable 
-                        code and collaborating with teams to deliver high-quality products.
+                        My work spans designing clean RESTful APIs, implementing secure JWT-based authentication,
+                        building multi-tenant platforms, and optimizing database performance under real world loads.
+                        I write clean, testable code and take architecture seriously.
                     </p>
                     <p>
-                        Outside of coding, I’m always exploring emerging technologies, contributing to open-source 
-                        projects, and refining my craft to stay ahead in the ever-evolving tech landscape.
+                        Outside of coding, I'm exploring AI integration, LangChain tooling, and contributing to
+                        the broader engineering community.
                     </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>ALX Software Engineering — Backend Track</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Nairobi, Kenya</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>ALX AI for Developers Certificate</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="about-stats">
                     <div class="stat-item">
-                        <h3>2+</h3>
-                        <p>Years Experience</p>
+                        <div class="stat-number">2+</div>
+                        <div class="stat-label">Years Building</div>
                     </div>
                     <div class="stat-item">
-                        <h3>10+</h3>
-                        <p>Projects Completed</p>
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Live Projects</div>
                     </div>
                     <div class="stat-item">
-                        <h3>3+</h3>
-                        <p>Technologies Mastered</p>
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Technologies</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">ALX</div>
+                        <div class="stat-label">Certified Engineer</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Architecture Highlights -->
+            <div class="arch-section">
+                <h3 class="arch-title">Backend Architecture Expertise</h3>
+                <div class="arch-grid">
+                    <div class="arch-item">
+                        <div class="arch-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h4>Auth Systems</h4>
+                        <p>JWT, refresh tokens, token blacklisting, OAuth2, RBAC for multi-role environments</p>
+                    </div>
+                    <div class="arch-item">
+                        <div class="arch-icon"><i class="fas fa-database"></i></div>
+                        <h4>Database Design</h4>
+                        <p>Relational & NoSQL schema design, query optimization, pagination for large datasets</p>
+                    </div>
+                    <div class="arch-item">
+                        <div class="arch-icon"><i class="fas fa-project-diagram"></i></div>
+                        <h4>API Architecture</h4>
+                        <p>RESTful APIs with clean separation of routing, business logic, and data models</p>
+                    </div>
+                    <div class="arch-item">
+                        <div class="arch-icon"><i class="fas fa-building"></i></div>
+                        <h4>Multi-Tenancy</h4>
+                        <p>Company-level data isolation and secure multi-tenant architecture across organisations</p>
                     </div>
                 </div>
             </div>
@@ -104,110 +190,77 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Languages</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-js-square"></i>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-code"></i>
-                            <span>TypeScript</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-database"></i>
-                            <span>SQL</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-terminal"></i>
-                            <span>Shell Scripting</span>
-                        </div>
+            <div class="section-label">02 — Skills</div>
+            <h2 class="section-title">Tools of the Trade</h2>
+            <div class="skills-layout">
+                <div class="skill-group">
+                    <div class="skill-group-header">
+                        <span class="skill-group-icon"><i class="fas fa-code"></i></span>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill primary"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill-pill primary"><i class="fab fa-js-square"></i> JavaScript</span>
+                        <span class="skill-pill"><i class="fas fa-code"></i> TypeScript</span>
+                        <span class="skill-pill"><i class="fas fa-database"></i> SQL</span>
+                        <span class="skill-pill"><i class="fas fa-terminal"></i> Shell Scripting</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Frameworks & Libraries</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fas fa-flask"></i>
-                            <span>Flask</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-rocket"></i>
-                            <span>FastAPI</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-flask"></i>
-                            <span>RestAPI</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-node-js"></i>
-                            <span>Node.js</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-server"></i>
-                            <span>Express.js</span>
-                        </div>
+
+                <div class="skill-group">
+                    <div class="skill-group-header">
+                        <span class="skill-group-icon"><i class="fas fa-layer-group"></i></span>
+                        <h3>Frameworks</h3>
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill primary"><i class="fas fa-flask"></i> Flask</span>
+                        <span class="skill-pill primary"><i class="fas fa-rocket"></i> FastAPI</span>
+                        <span class="skill-pill"><i class="fab fa-node-js"></i> Node.js</span>
+                        <span class="skill-pill"><i class="fas fa-server"></i> Express.js</span>
+                        <span class="skill-pill"><i class="fas fa-globe"></i> Next.js</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Tools & Libraries</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>Flask-JWT-Extended</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-database"></i>
-                            <span>SQLAlchemy</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-memory"></i>
-                            <span>Redis</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-code-branch"></i>
-                            <span>Alembic</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-cloud"></i>
-                            <span>AWS</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-server"></i>
-                            <span>Gunicorn</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-vial"></i>
-                            <span>Pytest</span>
-                        </div>
+
+                <div class="skill-group">
+                    <div class="skill-group-header">
+                        <span class="skill-group-icon"><i class="fas fa-server"></i></span>
+                        <h3>Databases & Infrastructure</h3>
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill primary"><i class="fas fa-database"></i> PostgreSQL</span>
+                        <span class="skill-pill primary"><i class="fas fa-database"></i> MySQL</span>
+                        <span class="skill-pill"><i class="fas fa-leaf"></i> MongoDB</span>
+                        <span class="skill-pill"><i class="fas fa-memory"></i> Redis</span>
+                        <span class="skill-pill"><i class="fas fa-cloud"></i> AWS</span>
+                        <span class="skill-pill"><i class="fas fa-server"></i> Gunicorn</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>AI-Enhanced Development</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fas fa-brain"></i>
-                            <span>LangCHain</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-robot"></i>
-                            <span>OpenAI API</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-magic"></i>
-                            <span>Prompt Engineering</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-network-wired"></i>
-                            <span>RAG Concept</span>
-                        </div>
+
+                <div class="skill-group">
+                    <div class="skill-group-header">
+                        <span class="skill-group-icon"><i class="fas fa-tools"></i></span>
+                        <h3>Dev Tools & Testing</h3>
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill primary"><i class="fas fa-vial"></i> Pytest</span>
+                        <span class="skill-pill"><i class="fas fa-code-branch"></i> Git / GitLab</span>
+                        <span class="skill-pill"><i class="fas fa-exchange-alt"></i> SQLAlchemy</span>
+                        <span class="skill-pill"><i class="fas fa-layer-group"></i> Alembic</span>
+                        <span class="skill-pill"><i class="fas fa-paper-plane"></i> Postman</span>
+                        <span class="skill-pill"><i class="fas fa-vial"></i> Mocha / Chai</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-group-header">
+                        <span class="skill-group-icon"><i class="fas fa-brain"></i></span>
+                        <h3>AI & LLM Tooling</h3>
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill primary"><i class="fas fa-link"></i> LangChain</span>
+                        <span class="skill-pill primary"><i class="fas fa-robot"></i> OpenAI API</span>
+                        <span class="skill-pill"><i class="fas fa-magic"></i> Prompt Engineering</span>
+                        <span class="skill-pill"><i class="fas fa-network-wired"></i> RAG Pipelines</span>
                     </div>
                 </div>
             </div>
@@ -217,62 +270,116 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <div class="section-label">03 — Projects</div>
+            <h2 class="section-title">Things I've Built</h2>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3><a href="https://watertek.onrender.com" target="_blank" rel="noopener noreferrer">WaterTek</a></h3>
-                        <div class="project-links">
-                            <a href="https://github.com/FionaGachuuri/WaterTek" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i>
-                            </a>
+
+                <!-- SkillPlus -->
+                <div class="project-card featured">
+                    <div class="project-card-inner">
+                        <div class="project-meta">
+                            <span class="project-type">EdTech · Multi-Tenant LMS</span>
+                            <div class="project-links">
+                                <a href="https://github.com/MauriceNgicho/SkillLink" target="_blank" class="project-link" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <p class="project-description">
-                        A smart, role-based water billing and issue reporting system. Designed to simplify 
-                        utility management for users while providing powerful tools for administrators.
-                    </p>
-                    <a href="https://watertek.onrender.com" target="_blank" class="btn btn-secondary project-view-link" style="margin-bottom: 10px;">View Project</a>
-                    <div class="project-tech">
-                        <span class="tech-tag">Flask</span>
-                        <span class="tech-tag">Flask-JWT-Extended</span>
-                        <span class="tech-tag">SQLAlchemy</span>
-                        <span class="tech-tag">Alembic</span>
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">Gunicorn</span>
-                        <span class="tech-tag">Jinja2</span>
-                    </div>
-                    <div class="project-role">
-                        <strong>Role:</strong> Fullstack Developer (Backend focus)
+                        <h3 class="project-title">SkillPlus</h3>
+                        <p class="project-description">
+                            A multi-tenant corporate Learning Management System enabling companies to manage employee 
+                            training and development. Built with company-level data isolation, JWT-based auth with 
+                            RBAC (Admin, Manager, Employee), and full course enrollment and progress tracking.
+                        </p>
+                        <ul class="project-features">
+                            <li>Multi-tenant architecture with company-level data isolation</li>
+                            <li>JWT auth + role-based access control across 3 user tiers</li>
+                            <li>Lesson-level progress tracking with auto enrollment updates</li>
+                            <li>Alembic migrations for schema version control</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">SQLAlchemy</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">Alembic</span>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-role"><i class="fas fa-user-cog"></i> Backend Developer</span>
+                        </div>
                     </div>
                 </div>
 
+                <!-- WaterTek -->
                 <div class="project-card">
-                    <div class="project-header">
-                        <h3>Skillink</h3>
-                        <div class="project-links">
-                            <a href="https://github.com/MauriceNgicho/SkillLink" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i>
+                    <div class="project-card-inner">
+                        <div class="project-meta">
+                            <span class="project-type">Utility · Billing System</span>
+                            <div class="project-links">
+                                <a href="https://watertek.onrender.com" target="_blank" class="project-link" aria-label="Live site">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/FionaGachuuri/WaterTek" target="_blank" class="project-link" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">WaterTek</h3>
+                        <p class="project-description">
+                            A smart, role-based water billing and issue reporting system. Powers billing workflows, 
+                            meter readings, and issue tracking for utility operations with optimized SQL queries 
+                            and pagination for scalable data retrieval.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Flask-JWT-Extended</span>
+                            <span class="tech-tag">SQLAlchemy</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Alembic</span>
+                            <span class="tech-tag">Gunicorn</span>
+                            <span class="tech-tag">Jinja2</span>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-role"><i class="fas fa-user-cog"></i> Fullstack (Backend focus)</span>
+                            <a href="https://watertek.onrender.com" target="_blank" class="project-live-btn">
+                                Live <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
-                    <p class="project-description">
-                        A corporate e-learning platform that helps companies manage training programs, 
-                        track progress, and promote knowledge sharing.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Flask</span>
-                        <span class="tech-tag">SQLAlchemy</span>
-                        <span class="tech-tag">Alembic</span>
-                        <span class="tech-tag">SQLite</span>
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                    </div>
-                    <div class="project-role">
-                        <strong>Role:</strong> Backend Developer
+                </div>
+
+                <!-- Sawava -->
+                <div class="project-card">
+                    <div class="project-card-inner">
+                        <div class="project-meta">
+                            <span class="project-type">Web · Business Site</span>
+                            <div class="project-links">
+                                <a href="https://sawava.com" target="_blank" class="project-link" aria-label="Live site">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Sawava</h3>
+                        <p class="project-description">
+                            A professional business website for a virtual assistance company. Built with Next.js 
+                            with a focus on performance, user experience, and lead generation optimization.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Axios</span>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-role"><i class="fas fa-user-cog"></i> Frontend Developer</span>
+                            <a href="https://sawava.com" target="_blank" class="project-live-btn">
+                                Live <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -280,32 +387,63 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
+            <div class="section-label">04 — Contact</div>
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Let's work together</h3>
-                    <p>
-                        I'm always interested in new opportunities and exciting projects. 
-                        Whether you have a question or just want to say hi, feel free to reach out!
+                    <p class="contact-intro">
+                        I'm open to backend engineering roles, freelance projects, and interesting collaborations.
+                        Whether you have a project in mind or just want to connect — drop me a message.
                     </p>
                     <div class="contact-links">
                         <a href="mailto:mrcngicho@gmail.com" class="contact-link">
-                            <i class="fas fa-envelope"></i>
-                            mrcngicho@gmail.com
+                            <div class="contact-link-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <div class="contact-link-label">Email</div>
+                                <div class="contact-link-value">mrcngicho@gmail.com</div>
+                            </div>
                         </a>
                         <a href="https://github.com/MauriceNgicho" target="_blank" class="contact-link">
-                            <i class="fab fa-github"></i>
-                            github.com/MauriceNgicho
+                            <div class="contact-link-icon"><i class="fab fa-github"></i></div>
+                            <div>
+                                <div class="contact-link-label">GitHub</div>
+                                <div class="contact-link-value">github.com/MauriceNgicho</div>
+                            </div>
                         </a>
                         <a href="https://www.linkedin.com/in/maurice-ngicho-069654234/" target="_blank" class="contact-link">
-                            <i class="fab fa-linkedin"></i>
-                            linkedin.com/in/maurice-ngicho
+                            <div class="contact-link-icon"><i class="fab fa-linkedin-in"></i></div>
+                            <div>
+                                <div class="contact-link-label">LinkedIn</div>
+                                <div class="contact-link-value">linkedin.com/in/maurice-ngicho</div>
+                            </div>
                         </a>
                     </div>
                 </div>
-                <a href="mailto:mrcngicho@gmail.com?subject=Contact%20from%20Portfolio%20Website" class="btn btn-primary">
-                    <i class="fas fa-envelope"></i> Send Message
-                </a>
+
+                <form class="contact-form" id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                        <span class="form-error" id="nameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        <span class="form-error" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
+                        <span class="form-error" id="messageError"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                        <span class="btn-text"><i class="fas fa-paper-plane"></i> Send Message</span>
+                        <span class="btn-loading" style="display:none"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+                    </button>
+                    <div class="form-success" id="formSuccess" style="display:none">
+                        <i class="fas fa-check-circle"></i> Message sent! I'll be in touch soon.
+                    </div>
+                </form>
             </div>
         </div>
     </section>
@@ -314,17 +452,22 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 Maurice Ngicho.</p>
+                <div class="footer-brand">
+                    <span class="footer-logo">MN<span class="logo-dot">.</span></span>
+                    <span class="footer-tagline">Building backends that scale.</span>
+                </div>
                 <div class="footer-links">
                     <a href="#home">Home</a>
                     <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
                     <a href="#projects">Projects</a>
                     <a href="#contact">Contact</a>
                 </div>
+                <p class="footer-copy">&copy; 2026 Maurice Ngicho</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
