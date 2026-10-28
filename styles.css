@@ -1116,3 +1116,75 @@ section { padding: 6rem 0; }
     .about-stats { grid-template-columns: repeat(2, 1fr); }
     .hero-title { font-size: 2.5rem; }
 }
+
+/* Append this file to the end of the existing styles.css. */
+
+.hamburger {
+    border: 0;
+    background: transparent;
+    padding: 0.35rem;
+}
+
+.hamburger:focus-visible,
+.nav-link:focus-visible,
+.project-link:focus-visible,
+.project-live-btn:focus-visible,
+.btn:focus-visible,
+.social-link:focus-visible,
+.contact-link:focus-visible,
+.footer-links a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
+.projects-intro {
+    max-width: 760px;
+    color: var(--text-mid);
+    font-size: 1.02rem;
+    line-height: 1.8;
+    margin-top: -2.25rem;
+    margin-bottom: 2rem;
+}
+
+.project-status {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--border-accent);
+    border-radius: 100px;
+    padding: 0.2rem 0.65rem;
+    color: var(--accent);
+    background: var(--accent-dim);
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+.form-note {
+    margin-bottom: 1.25rem;
+    color: var(--text-lo);
+    font-size: 0.82rem;
+    line-height: 1.6;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+.project-card-inner {
+    height: 100%;
+}
+
+.project-description,
+.project-features li {
+    overflow-wrap: anywhere;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
